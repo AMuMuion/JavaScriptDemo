@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>9*9乘法表</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				height: 300px;
+				width: 300px;
+				/* 设置盒子的背景颜色 */
+				background-color:#2f82fe;
+				/* 设置文本颜色 */
+				color: #fff;
+				/* 设置文本粗细 */
+				font-weight: 600;
+				/* 设置文本相对盒子垂直居中 */
+				line-height: 300px;
+				/* 盒子相对于页面水平居中 */
+				margin: 0 auto;
+				/* flex布局法 */
+				display: flex;
+				/* 使子项目水平居中 */
+				justify-content: center;
+				/* 使子项目垂直居中 */
+				align-items: center;
+				
+			}
+			#box2{
+				/* 画出一条1px高的直线 */
+				height: 100px;
+				width: 100px;
+				background-color: #FAE53E;
+				/* 使用transform的scale属性沿Y轴缩放50% */
+				transform: scaleY(0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 首先写一个盒子 -->
+		<div id="box">
+			<div id="box2">
+			</div>
+		</div>
+	</body>
+	<!-- <script src="js/demo-1.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var s = '';
+		for(var i = 0;i<10;i++){
+			for(var h=i;h<10;h++){
+				s += "* ";
+			}
+			s += "\n";
+		}
+		console.log(s);
+	</script>
+	<script>
+		var s1 = '';
+		for(var i=0;i<=10;i++){
+			for(var h=0;h<i;h++){
+				s1 += "* ";
+			}
+			s1 += "\n";
+		}
+		console.log(s1);
+	</script> -->
+	<!-- <script>
+		// var s2 = '';
+		// for(var i=0;i<=10;i++){
+		// 	var not = "";
+		// 	for(var h=1;h<=10-i;h++){ //打印空格
+		// 		not += " ";
+		// 	}
+		// 	var star = "";
+		// 	for(var m=1;m<=2*i-1;m++){ //打印*号
+		// 		star += "*";
+		// 	}
+		// 	s2 += not + star + "\n"; //字符串的拼接
+		// }
+		// console.log(s2);
+		
+		// 打印数组中的所有元素
+		 // var arr = [1,2,3,45,7,6,7,35,66,48,54];
+		 // for(var i =0;i<arr.length;i++){
+			//  console.log(arr[i]);
+		 // }
+		 
+		// 将数组中所有的数字相加并求和
+		// 1.声明一个数组
+		// var arr = [1,2,3,45,7,6,7,35,66,48,54];
+		// // 2.给后面的和预先留个坑位放值
+		// var sum = 0;
+		// // 使用for循环遍历每一个数组元素
+		// for(var i=0;i<arr.length;i++){
+		// 	// 等于 new sum = old sum + arr[i],值保留在sum中，直到循环结束
+		// 	sum += arr[i];
+		// }
+		// // 真相只有一个
+		// console.log(sum);
+		
+		// 打印数组中最大的值
+		// // 声明一个数组
+		// var arr = [1,2,3,45,7,6,7,35,66,48,54];
+		// // 依旧声明一个坑位
+		// var max = 0;
+		// // 使用for循环遍历数组
+		// for(var i=0;i<arr.length;i++){
+		// 	// 判断两值大小,保留更大的值在max中
+		// 	if(max<arr[i]){
+		// 		max=arr[i];
+		// 	}
+		// }
+		// console.log(max);
+		
+		// 打印数组中所有的偶数
+		// var arr = [1,2,3,45,7,6,7,35,66,48,54];
+		// for(var i=0;i<arr.length;i++){
+		// 	// 判断arr第i个下标对2取余是否为0
+		// 	 if(arr[i]%2==0){
+		// 		 console.log(arr[i]);
+		// 	 }
+		// }
+		
+		// var arr = [1,1,2,3,13,1];
+		// var arr = [12,1,23,15,[13,2,5,9]];
+		// var arr = [23,3545,35,[56,8,6,[45,86,6]]];
+		
+		// var arr = [1,2,3,45,7,6,7,35,66,48,54];
+		// var s = '';
+		// for(var i =0;i<arr.length;i++){
+		// 	// 在这一行替换""中的符号即可替换分隔符
+		// 	s += arr[i] + "|";
+		// }
+		// console.log(s);
+		
+		
+	</script> -->
+</html>

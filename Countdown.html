@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新年倒计时</title>
+		<!-- <style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #000 url(img/newyear2.jpg);
+				background-attachment: fixed;
+				/* 混合模式,背景图片和颜色混合 */
+				background-blend-mode: hard-light;
+			}
+			.container{
+				position: absolute;
+				top: 80px;
+				left: 100px;
+				right: 100px;
+				bottom: 80px;
+				background: url(img/newyear2.jpg);
+				background-blend-mode: color-dodge;
+				/* 固定背景图片 */
+				/* background-attachment: fixed; */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				/* 设置flex布局元素的方向 */
+				flex-direction: column;
+				box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+			}
+			.container h2{
+				text-align: center;
+				font-size: 10em;
+				line-height: 0.7em;
+				color: #e6af4b;
+				margin-top: -80px;
+			}
+			.container h2 span{
+				display: block;
+				font-weight: 300;
+				letter-spacing: 6px;
+				font-size: 0.2em;
+			}
+			.countdown{
+				display: flex;
+				margin-top: 50px;
+			}
+			.countdown div{
+				position: relative;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				background: #CE362B;
+				color: #e6af4b;
+				margin: 0 15px;
+				font-size: 3em;
+				font-weight: 500;
+			}
+			.countdown div::before{
+				content: '';
+				position: absolute;
+				bottom: -30px;
+				left: 0;
+				width: 100%;
+				height: 35px;
+				background: #e6af4b;
+				color: #CE362B;
+				font-size: 0.35em;
+				line-height: 35px;
+				font-weight: 400;
+			}
+			.countdown div#day::before{
+				content: 'Days';
+				
+			}
+			.countdown div#hour::before{
+				content: 'Hours';
+				
+			}
+			.countdown div#minute::before{
+				content: 'Minutes';
+				
+			}
+			.countdown div#second::before{
+				content: 'Seconds';
+				
+			}
+		</style> -->
+		<style type="text/css">
+			p{
+				font-size: 24px;
+				color: #FAE53E;
+				display: block;
+				background-color: #2F82FE;
+				text-align: center;
+				width: 600px;
+				margin: 20% auto;
+				line-height: 50px;
+			}
+		</style>
+		<script>
+			// window.onload页面加载完成，表示在网页加载完毕后立刻执行
+			window.onload = function(){
+				// setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式
+				setInterval(function(){
+					// 获取当前时间
+					var nowTime = new Date();
+					// 创建目标日期
+					var endTime = new Date("2021-2-12 00:00:00");
+					// 两个时间之间的时间差,秒为单位
+					
+					var secondes = parseInt((endTime.getTime()-nowTime.getTime())/1000);
+					// 计算时间差天数，秒数/3600（一分钟60秒，一小时60分，合3600秒每小时）/一天24小时
+					var d = parseInt(secondes / 3600 / 24);
+					// 计算时间差小时，同上
+					var h = parseInt(secondes / 3600 % 24);
+					// 计算时间差分钟
+					var m = parseInt(secondes / 60 % 60);
+					// 计算时间差秒数
+					var s = parseInt(secondes % 60);
+					document.getElementById("countdown").innerHTML = "距2021年还有" + d + "天" + h + "时" + m + "分" + s + "秒";
+				// ,1000表示1000毫秒,即每秒
+				},1000);
+			}
+		</script>
+	</head>
+	<body>
+		<p id="countdown"></p>
+	<!-- 	<div class="container">
+			<h2><span>Countdown to New Year</span>2021</h2>
+			<div class="countdown">
+				<div id="day">NA</div>
+				<div id="hour">NA</div>
+				<div id="minute">NA</div>
+				<div id="second">NA</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var countDate = new Date('Feb 12,2021 00:00:00').getTime();
+			
+			function newYear(){
+				var now = new Date().getTime();
+					gap = countDate - now;
+					
+					var second = 1000;
+					var minute = second * 60;
+					var hour = minute * 60;
+					var day = hour * 24;
+					
+					var d = Math.floor(gap / (day));
+					var h = Math.floor((gap % (day)) / (hour));
+					var m = Math.floor((gap % (hour)) / (minute));
+					var s = Math.floor((gap % (minute)) / second);
+					
+					document.getElementById('day').innerText = d;
+					document.getElementById('hour').innerText = h;
+					document.getElementById('minute').innerText = m;
+					document.getElementById('second').innerText = s;
+			}
+			
+			setInterval(function(){
+				newYear();
+			},1000)
+		</script> -->
+	</body>
+</html>
